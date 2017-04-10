@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+
+    <modules>
+        <Ecommistry_ProductList>
+            <version>0.0.1</version>
+        </Ecommistry_ProductList>
+    </modules>
+
+    <frontend>
+        <layout>
+            <updates>
+                <ecommistry_productlist module="Ecommistry_ProductList">
+                    <file>ecommistry_productlist.xml</file>
+                </ecommistry_productlist>
+            </updates>
+        </layout>     
+    </frontend>
+
+    <global>
+        <helpers>
+            <ecommistry_productlist>
+                <class>Ecommistry_ProductList_Helper</class>
+            </ecommistry_productlist>
+        </helpers>        
+    </global>
+</config>
