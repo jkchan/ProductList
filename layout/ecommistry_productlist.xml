@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout>
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="addLink">
+                <name>product_listing_section</name>
+                <path>productlist/index/index</path>
+                <label>Product Listing Section</label>
+            </action>
+        </reference>
+    </customer_account>
+
+    <!--layout loads controller IndexController action index under produclist module-->
+    <productlist_index_index>
+    	<!--loads the customer account layout-->
+        <update handle="customer_account" />
+        <!--calls the customer account wrapper-->
+        <reference name="my.account.wrapper">
+        	
+        	<!-- phtml file loads the header part of the page, insde the code it loads the childHtml Blocks-->
+	        <block type="core/template" name="ecommistry_productlist_container" template="ecommistry/productlist.phtml">
+	        	<!--phtml generates the listing of all the product-->
+	        	<block type="ecommistry_productlist/listing" name="ecommistry_productlist_content" as="product_listing" template="ecommistry/list.phtml">
+			        <!--adds in the layout toolbar for sorting, limiting and grid/list views-->
+			        <block type="catalog/product_list_toolbar" name="product_list_toolbar" template="ecommistry/toolbar.phtml">
+			            <block type="page/html_pager" name="product_list_toolbar_pager"/>
+			        </block>
+			        <action method="addColumnCountLayoutDepend"><layout>three_columns</layout><count>3</count></action>
+			        <action method="setToolbarBlockName"><name>product_list_toolbar</name></action>
+			        <action method="setColumnCount"><columns>3</columns></action>
+			    </block>
+	        </block>
+
+	    </reference>
+    </productlist_index_index>
+
+</layout>
