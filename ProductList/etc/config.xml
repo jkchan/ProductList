@@ -55,9 +55,9 @@
         <!-- layout declaration-->
         <layout>
             <updates>
-                <productlist module="Ecommistry_ProductList">
+                <ecommistry_productlist module="Ecommistry_ProductList">
                     <file>ecommistry_productlist.xml</file>
-                </productlist>
+                </ecommistry_productlist>
             </updates>
         </layout>
         <!-- layout declaration-->
