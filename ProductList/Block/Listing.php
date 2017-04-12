@@ -14,9 +14,10 @@ class Ecommistry_ProductList_Block_Listing extends Mage_Catalog_Block_Product_Li
         
         if(is_null($this->_productCollection)) {
             $this->_productCollection = parent::_getProductCollection();
+            $attribute = Mage::getStoreConfig('ecommistry/productlist/attribute');
 
             //This filters the collection 
-            $this->_productCollection->addAttributeToFilter('handle_display', array('eq' => 1));// or your custom filter
+            $this->_productCollection->addAttributeToFilter($attribute, array('eq' => 1));// or your custom filter
         }
         return $this->_productCollection;
     }
