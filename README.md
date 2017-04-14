@@ -39,6 +39,20 @@ Customer Product Listing Page:
 	7. Check if the attribute is installed.
 	8. Check if the module is successfully installed.
 
+##Sample Testing
+
+To Sign In to an account:
+	
+	URL:http://128.199.90.249/index.php
+	E-mail:sample-user@gmail.com
+	Password: passw0rd
+
+To Sign In to Admin account:
+
+	URL:http://128.199.90.249/index.php/admin/
+	Username: admin
+	Password: passw0rd
+
 Happy Coding!
 
 
